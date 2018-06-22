@@ -35,7 +35,8 @@ class Student
       LIMIT 1;
     SQL
     
-    DB[:conn].execute 
+    DB[:conn].execute(sql, name) do |row|
+      Student.new
   end
   
   def save

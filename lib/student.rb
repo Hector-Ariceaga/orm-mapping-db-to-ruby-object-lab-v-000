@@ -32,7 +32,9 @@ class Student
       SELECT *
       FROM students
       where name = ?
-      LIMIT 1
+      LIMIT 1;
+    SQL
+    
   end
   
   def save

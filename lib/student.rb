@@ -21,8 +21,9 @@ class Student
     
     DB[:conn].execute(sql).map do |row|
       Student.new_from_db(row)
-      binding.pry
+      
     end
+    binding.pry
   end
 
   def self.find_by_name(name)

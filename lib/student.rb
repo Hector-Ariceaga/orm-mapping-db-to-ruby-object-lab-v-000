@@ -71,4 +71,9 @@ class Student
       SELECT *
       FROM students
       WHERE students.grade = "9th"
+    SQL
+    
+    DB[:conn].execute(sql).map do |row|
+      Student.new_from_db(row)
+    end
 end

@@ -31,7 +31,8 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      where 
+      where name = ?
+      LIMIT 1
   end
   
   def save

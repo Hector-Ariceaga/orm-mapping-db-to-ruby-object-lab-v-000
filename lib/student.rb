@@ -36,7 +36,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql, name) do |row|
-      Student.new
+      Student.new_from_db(row)
   end
   
   def save
